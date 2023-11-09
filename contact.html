@@ -52,12 +52,12 @@
                                 <!-- To make this form functional, sign up at-->
                                 <!-- https://startbootstrap.com/solution/contact-forms-->
                                 <!-- to get an API token!-->
-                                <form action="/contact" method="post" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <form action="/contact" method="post" data-sb-form-api-token="API_TOKEN">
                                     
                                     <!-- Message input-->
                                     <div class="form-floating mb-3">
-                                        <textarea class="form-control" id="message" type="text" placeholder="Insira sua mensagem aqui..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                        <label for="message">Escreva o que deseja aqui</label>
+                                        <textarea class="form-control" name="comentario" id="comentario" type="text" placeholder="Insira sua mensagem aqui..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <label for="comentario">Escreva o que deseja aqui</label>
                                         <div class="invalid-feedback" data-sb-feedback="message:required">A mensagem é necessária</div>
                                     </div>
                                     <!-- Submit success message-->
@@ -75,7 +75,7 @@
                                     <!-- an error submitting the form-->
                                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                                     <!-- Submit Button-->
-                                    <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Enviar</button></div>
+                                    <div class="d-grid"><button class="btn btn-primary btn-lg " id="submitButton" type="submit">Enviar</button></div>
                                 </form>
                             </div>
                         </div>

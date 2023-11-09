@@ -61,7 +61,7 @@ app.post("/contact", async(req,res)=>{
 
     try{
         const newContact = await contact.save();
-        res.json({error : null, msg : "Cadastro ok", contactID : newContact._id});
+        res.json({error : null, msg : "Mensagem enviada com sucesso!!", contactID : newContact._id});
     } 
     catch(error){
         res.status(400).json((error))
@@ -89,7 +89,7 @@ app.post("/login", async (req,res)=>{
 
     })
 
-    if(email==null || senha==null){
+    if(nome==null || telefone==null || emailEntrar==null || senhaEntrar==null || confirmeSenha==null){
         return res.status(400).json({error: "preencha todos os dados"})
     }
 
