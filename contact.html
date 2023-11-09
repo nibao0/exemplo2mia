@@ -18,14 +18,14 @@
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="https://cdn3.iconfinder.com/data/icons/mother-earth-day-6/64/Care-environment-hands-ecology-earth-globe-512.png"> SUSTENTERRA</a>
+                    <a class="navbar-brand" href="/"><img style="height: 40px;" src="https://cdn3.iconfinder.com/data/icons/mother-earth-day-6/64/Care-environment-hands-ecology-earth-globe-512.png"> SUSTENTERRA</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" href="main.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">Sobre</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/about">Sobre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/contact">Contato</a></li>
                            
                                 </ul>
                             </li>
@@ -52,29 +52,11 @@
                                 <!-- To make this form functional, sign up at-->
                                 <!-- https://startbootstrap.com/solution/contact-forms-->
                                 <!-- to get an API token!-->
-                                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                    <!-- Name input-->
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                        <label for="name">Nome Completo</label>
-                                        <div class="invalid-feedback" data-sb-feedback="name:required">O nome é obrigatório</div>
-                                    </div>
-                                    <!-- Email address input-->
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                        <label for="email">E-mail</label>
-                                        <div class="invalid-feedback" data-sb-feedback="email:required">O E-mail é obritatório</div>
-                                        <div class="invalid-feedback" data-sb-feedback="email:email">E-mail inválido</div>
-                                    </div>
-                                    <!-- Phone number input-->
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                        <label for="phone">Numero de telefone</label>
-                                        <div class="invalid-feedback" data-sb-feedback="phone:required">O numero de telefone é obrigatório</div>
-                                    </div>
+                                <form action="/contact" method="post" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                    
                                     <!-- Message input-->
                                     <div class="form-floating mb-3">
-                                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <textarea class="form-control" id="message" type="text" placeholder="Insira sua mensagem aqui..." style="height: 10rem" data-sb-validations="required"></textarea>
                                         <label for="message">Escreva o que deseja aqui</label>
                                         <div class="invalid-feedback" data-sb-feedback="message:required">A mensagem é necessária</div>
                                     </div>
