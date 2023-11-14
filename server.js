@@ -97,8 +97,8 @@ app.post("/login", async (req,res)=>{
         return res.status(400).json({error : "as senhas não coincidem"})
     }
 
-    const emailexiste= await Usuario.findOne({email:email})
-    if(emailexiste){
+    const emailexiste= await Usuario.findOne({email:emailEntrar})
+   if(emailexiste){
         return res.status(400).json({error:"o email cadastrado ja existe "})
     }
 
