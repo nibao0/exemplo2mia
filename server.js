@@ -10,6 +10,7 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+app.use(express.static('public'))
 const port = 3001;
 
 
@@ -130,6 +131,21 @@ app.post("/entrar", async(req, res)=>{
         return res.status(400).json({error: "preencha todos os dados"})
     }
 
+
+    if(emailexiste){
+        return res.sendFile(__dirname + "/index.html")
+    } else {
+        return res.status(400).json({error :"os dados estão errados"})
+    }
+
+
+    try{
+        const newEntrar = await entrar.save();
+        res.json({error : null, msg : "conta acessada com sucesso", entrarId : newEntrar._id});
+    } catch(error){
+        res.status(400).json({error});
+    }
+    
 
 });
 
